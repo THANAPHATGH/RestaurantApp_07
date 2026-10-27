@@ -67,7 +67,6 @@ namespace RestaurantApp_07
                             Console.WriteLine("ไม่พบร้านอาหารประเภทนี้");
                         }
                         break;
-
                     case "3":
                         Console.Write("กรอกชื่อร้านที่ต้องการค้นหา: ");
                         string keyword = Console.ReadLine();
@@ -92,22 +91,7 @@ namespace RestaurantApp_07
                         }
                         break;
 
-                    case "4":
-                        double total = 0;
-                        double highest = double.MinValue;
-                        foreach (Restaurant r in restaurants)
-                        {
-                            total += r.Rating;
-                            if (r.Rating > highest)
-                            {
-                                highest = r.Rating;
-                            }
-                        }
-                        double average = total / restaurants.Count;
-                        Console.WriteLine("จำนวนร้าน: " + restaurants.Count);
-                        Console.WriteLine("คะแนนเฉลี่ย: " + average.ToString("F2"));
-                        Console.WriteLine("คะแนนสูงสุด: " + highest);
-                        break;
+
                     case "0":
                         Console.WriteLine("ปิดโปรแกรม");
                         return;
